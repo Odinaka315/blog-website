@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+:root {
+  --white1: rgba(218, 204, 204, 0.671);
+  --white: white;
+  --black: rgb(20, 19, 19);
+  --grey: rgb(37, 34, 34);
+  --grey2: rgb(68, 65, 65);
+  --grey3: rgb(100, 95, 95);
+  --me: gray;
+}
+body {
+  background-color: var(--white1);
+}
+.heading {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+main {
+  display: grid;
+  margin-right: 20px;
+  margin-left: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.big-section {
+  display: grid;
+  grid-column: 1/5;
+  margin-right: 40px;
+  gap: 40px;
+}
+.big-section .big-card {
+  box-shadow: 6px 6px 6px 6px rgb(112, 108, 108);
+  background-color: var(--white);
+}
+.big-card {
+  padding-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.big-card .img-section {
+  width: 100%;
+}
+.small-section {
+  grid-column: 5/-1;
+  display: grid;
+  gap: 40px;
+}
+.small-section .about,
+.popular-posts,
+.Tags {
+  box-shadow: 3px 3px 3px 3px rgb(46, 44, 44);
+  background-color: var(--white);
+}
+.about {
+  padding-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about .img-section {
+  width: 100%;
+}
+.Tags {
+  height: 130px;
+}
+.Tags button {
+  background-color: var(--white1);
+  margin-left: 2px;
+  margin-right: 2px;
+  border: none;
+}
+.img-section img {
+  width: 100%;
+}
+.cap {
+  width: 100%;
+  margin-left: 15px;
+}
+header {
+  background-color: var(--white1);
+  font-size: 1.5rem;
+  height: 50px;
+  align-items: center;
+  display: flex;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.popular-posts ul {
+  list-style: none;
+  width: 100%;
+  padding: 0; /* optional: cleaner look */
+  margin: 0; /* optional */
+}
+
+.popular-posts li {
+  border-bottom: 2px solid var(--white1);
+  width: 100%;
+  display: flex; /* this helps layout img + texts nicely */
+  align-items: center; /* vertically center image/text */
+  padding: 10px; /* spacing inside each li */
+  box-sizing: border-box; /* ensures padding doesn’t affect width */
+}
+
+.popular-posts li img {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.popular-posts li p {
+  margin: 0;
+  line-height: 1.4;
+}
+.popular-posts li .text-container {
+  display: flex;
+  flex-direction: column;
+}
+.popular-posts li:hover {
+  background-color: rgb(112, 108, 108);
+}
+.popular-posts li .text-container p:first-child {
+  font-size: 20px;
+  margin: 0;
+}
+
+.popular-posts li .text-container p:last-child {
+  margin: 5px 0 0 0;
+}
+footer {
+  background-color: var(--grey);
+  height: 160px;
+  width: 100%;
+  margin-top: 40px;
+  padding-left: 20px;
+  padding-top: 40px;
+  color: white;
+}
+footer button {
+  height: 50px;
+  width: 100px;
+  margin-bottom: 20px;
+}
+footer button:nth-of-type(1) {
+  background-color: var(--grey2);
+  border: none;
+  color: var(--grey3);
+}
+footer button:nth-of-type(2) {
+  background-color: var(--black);
+  border: none;
+  color: white;
+}
+footer button:hover {
+  background-color: var(--me);
+  cursor: pointer;
+}
+footer p a {
+  color: white;
+}
+.read-more {
+  height: 40px;
+  width: 130px;
+  font-weight: 700;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* pushes content to left and right */
+  width: calc(100% - 15px);
+  margin-top: 30px;
+}
+.footer p {
+  margin: 0;
+  margin-right: 40px;
+  font-weight: 700;
+}
+.footer button:hover {
+  background-color: rgb(112, 108, 108);
+  border: 2px solid rgb(112, 108, 108);
+  cursor: pointer;
+}
+@media (max-width: 990px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  .big-section {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
